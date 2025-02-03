@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { HelpCircle, ArrowRight } from "lucide-react";
 import NumberFlow from "@number-flow/react";
