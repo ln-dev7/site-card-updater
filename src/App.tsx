@@ -38,12 +38,21 @@ export default function App() {
                 We found {sites.length} sites based on your browser history
               </p>
             </div>
-            <button
-              onClick={() => setSelectedSites([])}
-              className="text-gray-500 hover:text-gray-700 shrink-0"
-            >
-              Unselect All
-            </button>
+            {selectedSites.length === 0 ? (
+              <button
+                onClick={() => setSelectedSites(sites)}
+                className="text-gray-500 hover:text-gray-700 shrink-0"
+              >
+                Select All
+              </button>
+            ) : (
+              <button
+                onClick={() => setSelectedSites([])}
+                className="text-gray-500 hover:text-gray-700 shrink-0"
+              >
+                Unselect All
+              </button>
+            )}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
